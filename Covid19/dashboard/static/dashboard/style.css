@@ -1,0 +1,20 @@
+
+.window{
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    box-shadow: 0 2.8px 0.2px rgba(0, 0, 0, 0.005), 0 6.7px 5.3px rgba(0, 0, 0, 0.004), 0 12.5px 10px rgba(0, 0, 0, 0.015), -1px 7px 20px rgba(0, 0, 0, 0.022), 0px 9px 20px rgba(0, 0, 0, 0.026), -1px 6px 20px rgba(0, 0, 0, 0.01);
+}
+.cases1{
+    width:600px;
+    height: 500px;
+    position: fixed;
+    left:200px;
+    top:130px;
+}
+
+.cases2{
+    margin-top: 40px;
+    margin-left: 20px;
+}
