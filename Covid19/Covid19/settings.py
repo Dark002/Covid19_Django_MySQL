@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['0.0.0.0', '172.17.35.51' , '127.0.0.1', 'localhost']
 INSTALLED_APPS = [
     'home',
     'dashboard',
-    'include_css',
+    'datacenter',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

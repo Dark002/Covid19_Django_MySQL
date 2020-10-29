@@ -5,6 +5,6 @@ import json
 
 
 def home(request):
-    return render(request,'index/home.html')
+    return render(request,'home/home.html')
 
 

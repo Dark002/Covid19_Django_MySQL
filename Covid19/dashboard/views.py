@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
       
 
-def dashboard(request):
+def home(request):
     if(request.method=='POST'):
            return HttpResponse(request.post)
             
