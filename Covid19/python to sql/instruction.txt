@@ -1,9 +1,0 @@
-To upload data to local mysql server
-
-1) install mysql.connecter using following command
-   pip/pip3 install mysql-connector-python
-2) open python scipt  (script.py)
-
-3) change username and other details to link with sql 
-
-4) now just run the script 

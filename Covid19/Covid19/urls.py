@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',include("home.urls")),
     path('dashboard/',include("dashboard.urls")),
-    path('datacenter/',include("datacenter.urls"))
+    path('datacenter/',include("datacenter.urls")),
+    path('',include("home.urls"))
 ]
