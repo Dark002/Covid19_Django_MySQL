@@ -9,8 +9,6 @@ class world(models.Model):
     total_deaths = models.IntegerField(blank=True, null = True)
     total_recovered = models.IntegerField(blank=True, null = True)
     active_cases = models.IntegerField(blank=True, null = True)
-    class Meta:
-        db_table = 'world_data'
 
 class india_statewise(models.Model):
     state_name = models.CharField(unique=True, max_length=30, blank=False, null=True)

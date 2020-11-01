@@ -59,10 +59,10 @@ def global_report(date_string):
 	)
 
 	mycursor = mydb.cursor()
-	sql1="DELETE FROM world_data where country_name IS NOT NULL"
+	sql1="DELETE FROM datacenter_world where country_name IS NOT NULL"
 	mycursor.execute(sql1)
 	mydb.commit()
-	sql2 = "INSERT INTO world_data (country_name,total_cases,total_deaths,total_recovered,active_cases) VALUES (%s,%s,%s,%s,%s)"
+	sql2 = "INSERT INTO datacenter_world (country_name,total_cases,total_deaths,total_recovered,active_cases) VALUES (%s,%s,%s,%s,%s)"
 	mycursor.executemany(sql2,rows)
 	mydb.commit()  # to save final changes
 		
