@@ -17,7 +17,7 @@
    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <div class="cases1 window">
+ <!--- <div class="cases1 window">
     <form class="form-inline cases2" method="post">
       {% csrf_token %}
       <div class="form-group mb-2">
@@ -30,6 +30,62 @@
       </div>
       <button type="submit" class="btn btn-primary mb-2">Enter</button>
     </form>
+  </div>  -->
+  <h1 style="margin-top: 20px;text-align: center;">The Covid19 Dashboard</h1>
+  <div style="margin-top:70px;display:flex;justify-content: center;align-items: center;">
+      <div class="card" style="width: 18rem;float:left;">
+        <div class="card-body">
+          <h5 class="card-title">Total Confirmed Cases</h5>
+          <p class="card-text">{{total_cases}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;margin-left:60px;float:left;">
+        <div class="card-body">
+          <h5 class="card-title">Currently Active Cases</h5>
+          <p class="card-text">{{active_cases}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;margin-left:60px;float:left;">
+        <div class="card-body">
+          <h5 class="card-title">Recovered Cases</h5>
+          <p class="card-text">{{recoverd}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;margin-left:60px;float:left;">
+        <div class="card-body">
+          <h5 class="card-title">Total Deaths</h5>
+          <p class="card-text">{{deaths}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+  </div>
+  <div style="margin:50px;"> 
+      <h2>Cases by States</h2>
+  </div>  
+  <div style="margin:50px;height:500px;overflow:auto;">
+    <table class="table">
+      <thead  style="position:sticky; top:0" class="thead-dark">
+        <tr>
+          <th style="position:sticky; top:0" scope="col" >State</th>
+          <th style="position:sticky; top:0" scope="col">Confirmed Cases</th>
+          <th style="position:sticky; top:0" scope="col">Recoveries</th>
+          <th style="position:sticky; top:0" scope="col">Deaths</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%for x in tab%}
+            <tr>
+              <td>{{x.0}}</td>
+              <td>{{x.1}}</td>
+              <td>{{x.2}}</td>
+              <td>{{x.3}}</td>
+            </tr>
+        {% endfor %}  
+      </tbody>
+    </table>
   </div>  
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
