@@ -1,3 +1,5 @@
+{% load static %}
+{%load crispy_forms_tags %} 
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,7 +7,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link href="{% static 'datacenter/styles.css' %}" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
@@ -24,19 +26,43 @@
           </div>
         </div>
     </nav>
-    <form action='/datacenter/'  method="POST">
+    <br>
+    <br>
+    <form action='/datacenter/' style="text-align: center;" method="POST">
       {% csrf_token %}
-      {{ form }}
+      {{ form|crispy }}
       <p>Use yyyy-mm-dd formatting while entering date</p>
       <input type="submit" value="Submit">
     </form>
     {% if flag == 1 %}
-      <p>Country: {{ country }}</p>
-      <p>Date: {{ date }}</p>
-      <p>Total Cases: {{ total_cases }}</p>
-      <p>Active Cases: {{ active_cases }}</p>
-      <p>Total Recovered: {{ total_recovered }}</p>
-      <p>Total Deaths: {{ total_deaths }}</p>
+      <br>
+      <br>
+      <table class="center">
+        <tr>
+          <td>Country:</td>
+          <td>{{ country }}</td>
+        </tr>
+        <tr>
+          <td>Date:</td>
+          <td>{{ date }}</td>
+        </tr>
+        <tr>
+          <td>Total Cases:</td>
+          <td>{{ total_cases }}</td>
+        </tr>
+        <tr>
+          <td>Active Cases:</td>
+          <td>{{ active_cases }}</td>
+        </tr>
+        <tr>
+          <td>Total Recovered:</td>
+          <td>{{ total_recovered }}</td>
+        </tr>
+        <tr>
+          <td>Total Deaths:</td>
+          <td>{{ total_deaths }}</td>
+        </tr>
+      </table>
     {% endif %}
 <!--<form action='datacenter/statewise' method="GET">
       {{ statewise_data }}
