@@ -24,6 +24,7 @@ SECRET_KEY = ')p^knvxa(b@9u4tsrfrl918#e2c&+#wl$15p0&s^z=+)d$7loa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['0.0.0.0', '172.17.35.51' , '127.0.0.1', 'localhost']
 
@@ -34,6 +35,7 @@ INSTALLED_APPS = [
     'home',
     'dashboard',
     'datacenter',
+    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

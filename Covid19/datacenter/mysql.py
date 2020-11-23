@@ -54,10 +54,9 @@ def global_report(date_string):
 	mydb = mysql.connector.connect(
 	  host="localhost",
 	  user="django",
-	  password="USER@123",
+	  password="User@123",
 	  database="COVID19"
 	)
-
 	mycursor = mydb.cursor()
 	sql1="DELETE FROM datacenter_world where country_name IS NOT NULL"
 	mycursor.execute(sql1)

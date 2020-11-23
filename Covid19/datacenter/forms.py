@@ -3,4 +3,4 @@ from crispy_forms.helper import FormHelper
 
 class world_form(forms.Form):
     country=forms.CharField(label='Country', max_length=255)
-    date=forms.DateField(label='Date')
+    date=forms.DateField(label='Date', widget=forms.TextInput(attrs={'placeholder': ''}))

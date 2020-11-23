@@ -3,7 +3,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>home</title>
+    <title>DataCenter</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,15 +26,32 @@
           </div>
         </div>
     </nav>
-    <br>
-    <br>
-    <form action='/datacenter/' style="text-align: center;" method="POST">
-      {% csrf_token %}
-      {{ form|crispy }}
-      <p>Use yyyy-mm-dd formatting while entering date</p>
-      <input type="submit" value="Submit">
-    </form>
-    {% if flag == 1 %}
+    <div name="viewport" content="width=device-width, initial-scale=1.0"></div> 
+      {% if gmap %}
+      {{ gmap|safe }}
+      {% else %}
+      {% endif %}
+    </div>
+    <div name="viewport" content="width=device-width, initial-scale=1.0"></div> 
+      {% if graph %}
+      {{ graph|safe }}
+      {% else %}
+      {% endif %}
+   </div>
+   <div name="viewport" content="width=device-width, initial-scale=1.0"></div> 
+      {% if pre %}
+      {{ pre|safe }}
+      {% else %}
+      {% endif %} 
+   </div>
+   <div style="margin-top:70px;display:flex;justify-content: center;align-items: center;">
+      <form action='/datacenter/' style="text-align: center;width: 300px;" method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  {% if flag == 1 %}
       <br>
       <br>
       <table class="center">

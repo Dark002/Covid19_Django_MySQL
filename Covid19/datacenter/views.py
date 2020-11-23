@@ -2,11 +2,19 @@ from django.shortcuts import render
 from .forms import *
 from .models import world
 from .mysql import *
-
-# Create your views here.
+import plotly.express as px
+import pandas as pd
+import json
+import requests
+import plotly.offline as plot
+from . import global_data
+from . import data_mining
+# Create your views here. 
 def home(request):
-    context={}
     flag=0
+    gmap = global_data.get_map()
+    graph = global_data.get_graph()
+    pre = data_mining.prediction()
     if request.method == 'POST':
         form=world_form(request.POST)
         if form.is_valid():
@@ -30,21 +38,14 @@ def home(request):
                 w1=a['active_cases']
             context={'form':world_form,'flag':flag,'country':country,'date':date1,'total_cases':x1,
             'total_deaths':y1,'total_recovered':z1,'active_cases':w1,
-            'flag':flag}
-            #context["form"]=world_form
-            #context['country']=country
-            #context['date']=date
-            #context['total_cases']=get_total_cases(country)
-            #context['total_deaths']=get_total_deaths(country)
-            #context['total_recovered']=get_total_recovered(country)
-            #context['active_cases']=get_active_cases(country)
-            #context['flag']=flag
+            'flag':flag,'gmap':gmap,'graph':graph,'pre':pre}
             return render(request, 'datacenter/home.html',context)
         else :
-            context={'form':world_form,'flag':flag}
+            context={'form':world_form,'flag':flag,'gmap':gmap,'graph':graph,'pre':pre}
             return render(request, 'datacenter/home.html',context)
 
     else :
         form=world_form()
-        context={'form':world_form,'flag':flag}
+        context={'form':world_form,'flag':flag,'gmap':gmap,'graph':graph,'pre':pre}
         return render(request, 'datacenter/home.html',context)
+    return render(request, 'datacenter/home.html',context)
