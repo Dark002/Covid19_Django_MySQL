@@ -7,10 +7,15 @@ from plotly.offline import plot
 from fbprophet import Prophet
 import plotly.graph_objs as go
 import plotly.offline as py
+import os
+module_dir = os.path.dirname(__file__)  # get current directory
+file_path = os.path.join(module_dir, 'data/date.txt')
+con_path = os.path.join(module_dir,'data/confirmed.csv')
+rec_path = os.path.join(module_dir,'data/recovered.csv')
+de_path = os.path.join(module_dir,'data/deaths.csv')
 
 def get_confirmed():
-    url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
-    df  = pd.read_csv(url)
+    df  = pd.read_csv(con_path)
     df.drop(columns=['Province/State','Country/Region','Lat','Long'],inplace=True,axis=1)
     dates = []
     for i in df:

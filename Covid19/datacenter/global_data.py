@@ -5,12 +5,16 @@ import requests
 import plotly.offline as plot
 import plotly.graph_objs as go
 import chart_studio.plotly as py
-from datetime import datetime
+import os
+module_dir = os.path.dirname(__file__)  # get current directory
+file_path = os.path.join(module_dir, 'data/date.txt')
+con_path = os.path.join(module_dir,'data/confirmed.csv')
+rec_path = os.path.join(module_dir,'data/recovered.csv')
+de_path = os.path.join(module_dir,'data/deaths.csv')
+map_path = os.path.join(module_dir,'data/map.csv')
 
 def get_map():
-    url = 'https://api.covid19api.com/summary'
-    data = requests.get(url)
-    df = pd.DataFrame(data.json()['Countries'])
+    df = pd.read_csv(map_path)
     fig = px.choropleth( df, locations="Country",
                         color="TotalConfirmed", 
                         hover_name="Country", 
@@ -28,18 +32,15 @@ def get_map():
     graph = fig.to_html(full_html=False, default_height=800)
     return graph 
 def get_confirmed():
-    url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
-    df  = pd.read_csv(url)
+    df  = pd.read_csv(con_path)
     df.drop(columns=['Province/State'],inplace=True,axis=1)
     return df
 def get_deaths():
-    url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv"
-    df  = pd.read_csv(url)
+    df  = pd.read_csv(de_path)
     df.drop(columns=['Province/State'],inplace=True,axis=1)
     return df
 def get_recovered():
-    url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv"
-    df  = pd.read_csv(url)
+    df  = pd.read_csv(rec_path)
     df.drop(columns=['Province/State'],inplace=True,axis=1)
     return df
 def get_graph():

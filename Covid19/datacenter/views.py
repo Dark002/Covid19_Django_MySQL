@@ -9,9 +9,11 @@ import requests
 import plotly.offline as plot
 from . import global_data
 from . import data_mining
+from . import update
 # Create your views here. 
 def home(request):
     flag=0
+    update.run()
     gmap = global_data.get_map()
     graph = global_data.get_graph()
     pre = data_mining.prediction()

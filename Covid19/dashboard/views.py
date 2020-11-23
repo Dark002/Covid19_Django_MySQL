@@ -3,9 +3,10 @@ from django import forms
 from django.http import HttpResponse
 # Create your views here.
 from . import data_mining
-      
+from . import update      
 
 def home(request):
+    update.run()
     tab = data_mining.get_table()
     plot_confirmed = data_mining.get_confirmed()
     plot_active = data_mining.get_active()
