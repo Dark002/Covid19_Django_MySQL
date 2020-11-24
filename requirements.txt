@@ -1,0 +1,10 @@
+django
+requests
+bs4
+pandas
+plotly
+fbprophet
+mysql-connector-python
+django-crispy-forms
+chart-studio
+mysqlclient
