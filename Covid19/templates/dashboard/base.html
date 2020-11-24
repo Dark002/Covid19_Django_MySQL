@@ -25,36 +25,36 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link" href="/home/">Home</a>
-          <a class="nav-item nav-link" href="/dashboard/">DashBoard</a>
-          <a class="nav-item nav-link active" href="#">Data Center<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="#">DashBoard<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="/datacenter/">Data Center</a>
        <!----  <a class="nav-item nav-link disabled" href="#">Disabled</a>--->
         </div>
       </div>
   </nav>  
-  <h1 style="margin-top: 20px;text-align: center;">The Covid19 Dashboard</h1>
+  <h1 style="margin-top: 20px;text-align: center;">Covid19 Dashboard</h1>
   <div style="margin-top:70px;display:flex;justify-content: center;align-items: center;">
       <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;float:left;">
         <div class="card-body">
           <h5 class="card-title">Total Confirmed Cases</h5>
-          <p class="card-text">{{total_cases}}</p>
+          <p class="card-text"><h3>{{total_cases}}</h3></p>
         </div>
       </div>
       <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;margin-left:60px;float:left;">
         <div class="card-body">
           <h5 class="card-title">Currently Active Cases</h5>
-          <p class="card-text">{{active_cases}}</p>
+          <p class="card-text"><h3>{{active_cases}}</h3></p>
         </div>
       </div>
       <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;margin-left:60px;float:left;">
         <div class="card-body">
           <h5 class="card-title">Recovered Cases</h5>
-          <p class="card-text">{{recoverd}}</p>
+          <p class="card-text"><h3>{{recoverd}}</h3></p>
         </div>
       </div>
       <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;margin-left:60px;float:left;">
         <div class="card-body">
           <h5 class="card-title">Total Deaths</h5>
-          <p class="card-text">{{deaths}}</p>
+          <p class="card-text"><h3>{{deaths}}</h3></p>
         </div>
       </div>
   </div>
