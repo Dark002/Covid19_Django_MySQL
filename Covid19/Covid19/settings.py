@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'COVID19',
         'USER': 'django',
-        'PASSWORD': 'User@123',
+        'PASSWORD': 'USER@123',
         'HOST': 'localhost',
         'PORT': '8000',
     }
@@ -136,3 +136,4 @@ STATICFILES_DIRS =[
     BASE_DIR/"static",
 ]
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

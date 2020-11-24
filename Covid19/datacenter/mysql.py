@@ -54,7 +54,7 @@ def global_report(date_string):
 	mydb = mysql.connector.connect(
 	  host="localhost",
 	  user="django",
-	  password="User@123",
+	  password="USER@123",
 	  database="COVID19"
 	)
 	mycursor = mydb.cursor()
