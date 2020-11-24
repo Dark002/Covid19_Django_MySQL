@@ -22,7 +22,7 @@ def database(df):
 	  database="COVID19")
     mycursor = mydb.cursor()
     mycursor.execute('create table if not exists world_data (Country varchar(255),CounrtyCode varchar(10),slug varchar(255),NewConfirmed int,TotalConfirmed int,NewDeaths int,TotalDeaths int,NewRecovered int,TotalRecovered int,Date varchar(255))')
-    mycursor.execute('DELETE from india_data')
+    mycursor.execute('DELETE from world_data')
     df.drop(columns=['Premium'],inplace=True,axis=1)
     sql = "INSERT INTO world_data (Country,CounrtyCode,slug,NewConfirmed,TotalConfirmed,NewDeaths,TotalDeaths,NewRecovered,TotalRecovered,Date) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
     ls = []
