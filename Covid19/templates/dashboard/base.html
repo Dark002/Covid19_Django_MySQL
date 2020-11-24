@@ -33,47 +33,47 @@
   </nav>  
   <h1 style="margin-top: 20px;text-align: center;">The Covid19 Dashboard</h1>
   <div style="margin-top:70px;display:flex;justify-content: center;align-items: center;">
-      <div class="card" style="width: 18rem;float:left;">
+      <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;float:left;">
         <div class="card-body">
           <h5 class="card-title">Total Confirmed Cases</h5>
           <p class="card-text">{{total_cases}}</p>
         </div>
       </div>
-      <div class="card" style="width: 18rem;margin-left:60px;float:left;">
+      <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;margin-left:60px;float:left;">
         <div class="card-body">
           <h5 class="card-title">Currently Active Cases</h5>
           <p class="card-text">{{active_cases}}</p>
         </div>
       </div>
-      <div class="card" style="width: 18rem;margin-left:60px;float:left;">
+      <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;margin-left:60px;float:left;">
         <div class="card-body">
           <h5 class="card-title">Recovered Cases</h5>
           <p class="card-text">{{recoverd}}</p>
         </div>
       </div>
-      <div class="card" style="width: 18rem;margin-left:60px;float:left;">
+      <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;margin-left:60px;float:left;">
         <div class="card-body">
           <h5 class="card-title">Total Deaths</h5>
           <p class="card-text">{{deaths}}</p>
         </div>
       </div>
   </div>
-    <div style="width: 820px;margin:35px;float: left;">
+    <div class="mycard shadow-lg p-3 mb-5 bg-white rounded" style="width: 820px;margin:35px;float: left;">
       {% autoescape off %}
       {{ plot_confirmed }}
       {% endautoescape %}  
     </div>
-    <div style="width: 820px;margin:35px;float: right;">
+    <div class="mycard shadow-lg p-3 mb-5 bg-white rounded" style="width: 820px;margin:35px;float: right;">
       {% autoescape off %}
       {{ plot_active }}
       {% endautoescape %}  
     </div>
-    <div style="width: 820px;margin:35px;float: left">
+    <div class="mycard shadow-lg p-3 mb-5 bg-white rounded" style="width: 820px;margin:35px;float: left">
       {% autoescape off %}
       {{ plot_recovered}}
       {% endautoescape %}  
     </div>
-    <div style="width: 820px;margin:35px;float: right;">
+    <div class="mycard shadow-lg p-3 mb-5 bg-white rounded" style="width: 820px;margin:35px;float: right;">
       {% autoescape off %}
       {{ plot_death}}
       {% endautoescape %}  

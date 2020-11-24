@@ -54,7 +54,7 @@ def global_report(date_string):
 	mydb = mysql.connector.connect(
 	  host="localhost",
 	  user="django",
-	  password="User@123",
+	  password="USER@123",
 	  database="COVID19"
 	)
 	mycursor = mydb.cursor()
@@ -64,7 +64,6 @@ def global_report(date_string):
 	sql2 = "INSERT INTO datacenter_world (country_name,total_cases,total_deaths,total_recovered,active_cases) VALUES (%s,%s,%s,%s,%s)"
 	mycursor.executemany(sql2,rows)
 	mydb.commit()  # to save final changes
-		
 """a = sys.argv[1].split('-')
 year=int(a[2])
 month=int(a[0])

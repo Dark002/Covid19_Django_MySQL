@@ -29,7 +29,7 @@ def get_map():
                         height=700,
                         width=1800
                        ).update_layout(clickmode='event+select')
-    graph = fig.to_html(full_html=False, default_height=800)
+    graph = fig.to_html(full_html=False, default_height=700)
     return graph 
 def get_confirmed():
     df  = pd.read_csv(con_path)

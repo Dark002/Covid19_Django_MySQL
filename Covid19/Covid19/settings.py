@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'home',
     'dashboard',
     'datacenter',
-    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -88,7 +87,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'COVID19',
         'USER': 'django',
-        'PASSWORD': 'User@123',
+        'PASSWORD': 'USER@123',
         'HOST': 'localhost',
         'PORT': '8000',
     }

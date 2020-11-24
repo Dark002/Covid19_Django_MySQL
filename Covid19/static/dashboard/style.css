@@ -18,3 +18,10 @@
     margin-top: 40px;
     margin-left: 20px;
 }
+.mycard{
+    border-radius: 10px;
+    background: #fff;
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    padding: 14px 20px 18px 20px;
+    cursor: pointer;
+}
