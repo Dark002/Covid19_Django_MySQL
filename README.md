@@ -39,12 +39,12 @@ root@project:-$ python manage.py migrate
 root@project:-$ python manage.py runserver
 ```
 
-#Data Source
+# Data Source
 - Johns Hopkins University: [CSSE](https://systems.jhu.edu/) 2019-ncov data repository, found [here](https://github.com/CSSEGISandData/COVID-19).
 - COVID19-India API ,found [here](https://api.covid19india.org/)
 - COVID19 API by Kyle Redelinghuys ,found [here](https://covid19api.com/)
 
-#Contributors
+# Contributors
  - [Lakshay Jindal](https://github.com/Dark002)
  - [Jatin Garg](https://github.com/jatinjiogarg)
 
