@@ -46,7 +46,7 @@ root@project:-$ python manage.py runserver
 
 # Contributors
  - [Lakshay Jindal](https://github.com/Dark002)
- - [Jatin Garg](https://github.com/jatinjiogarg)
+ - [Jatin Garg](https://github.com/rivalq)
 
 
 
